@@ -19,24 +19,32 @@ const services = [
     tag: "Tarot & claridad",
     copy: "Encontrá respuestas sobre el amor, el trabajo, tus proyectos y las decisiones que hoy te inquietan.",
     meta: "Consulta personal",
+    image: readerImage,
+    imageAlt: "Manos sosteniendo una baraja de tarot",
   },
   {
     title: "Videncia",
     tag: "Intuición & futuro",
     copy: "Una conexión sensible para reconocer señales, comprender el presente y mirar posibilidades futuras.",
     meta: "A distancia",
+    image: "https://images.unsplash.com/photo-1558467778-122dbb038e3b?auto=format&fit=crop&w=900&q=85",
+    imageAlt: "Cartas de tarot desplegadas sobre una mesa",
   },
   {
     title: "Orientación afectiva",
     tag: "Amor & vínculos",
     copy: "Comprendé distancias, cambios y dinámicas de pareja desde un espacio confidencial y sin juicios.",
     meta: "Atención privada",
+    image: "https://images.unsplash.com/photo-1570639945209-27852ea44516?auto=format&fit=crop&w=900&q=85",
+    imageAlt: "Mesa de tarot iluminada por velas",
   },
   {
     title: "Limpieza energética",
     tag: "Armonía & renovación",
     copy: "Prácticas de armonización para personas y espacios que necesitan recuperar una energía más liviana.",
     meta: "Personal o espacios",
+    image: "https://images.unsplash.com/photo-1582072710175-e9c9f15b50ed?auto=format&fit=crop&w=900&q=85",
+    imageAlt: "Vela y cartas de tarot en una lectura",
   },
 ];
 
@@ -126,7 +134,7 @@ function App() {
           <div className="service-grid">
             {services.map((service, index) => (
               <article className="service-card reveal" key={service.title} style={{ "--delay": `${index * 70}ms` }}>
-                <img src={readerImage} alt="Consulta de tarot sobre una mesa" />
+                <img src={service.image} alt={service.imageAlt} />
                 <div className="service-body">
                   <h3>{service.title}</h3>
                   <span className="service-tag">{service.tag}</span>
