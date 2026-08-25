@@ -15,36 +15,28 @@ const specialties = [
 
 const services = [
   {
-    title: "Lectura de tarot",
-    tag: "Tarot & claridad",
-    copy: "Encontrá respuestas sobre el amor, el trabajo, tus proyectos y las decisiones que hoy te inquietan.",
-    meta: "Consulta personal",
+    title: "Problemas de pareja",
+    tag: "Amor & vínculos",
+    copy: "Si estás atravesando problemas de pareja —desconfianza, distancia, terceros en discordia— la consulta esotérica te da respuestas claras y un trabajo espiritual a medida para destrabar la relación.",
+    meta: "Trabajo espiritual a medida",
     image: readerImage,
     imageAlt: "Manos sosteniendo una baraja de tarot",
   },
   {
-    title: "Videncia",
-    tag: "Intuición & futuro",
-    copy: "Una conexión sensible para reconocer señales, comprender el presente y mirar posibilidades futuras.",
-    meta: "A distancia",
+    title: "Mal de ojo y magia blanca",
+    tag: "Protección & energía",
+    copy: "Reconocer el mal de ojo a tiempo evita que se profundice. Trabajo con magia blanca para revertirlo, proteger tu energía y la de tu familia.",
+    meta: "Protección energética",
     image: "https://images.unsplash.com/photo-1558467778-122dbb038e3b?auto=format&fit=crop&w=900&q=85",
     imageAlt: "Cartas de tarot desplegadas sobre una mesa",
   },
   {
-    title: "Orientación afectiva",
-    tag: "Amor & vínculos",
-    copy: "Comprendé distancias, cambios y dinámicas de pareja desde un espacio confidencial y sin juicios.",
-    meta: "Atención privada",
+    title: "Ayuda espiritual",
+    tag: "Destrabar caminos",
+    copy: "Cuando la vida se traba en todos los frentes, la ayuda espiritual y los trabajos espirituales abren el camino: veo el origen del problema y trabajo directamente sobre él.",
+    meta: "Acompañamiento personal",
     image: "https://images.unsplash.com/photo-1570639945209-27852ea44516?auto=format&fit=crop&w=900&q=85",
     imageAlt: "Mesa de tarot iluminada por velas",
-  },
-  {
-    title: "Limpieza energética",
-    tag: "Armonía & renovación",
-    copy: "Prácticas de armonización para personas y espacios que necesitan recuperar una energía más liviana.",
-    meta: "Personal o espacios",
-    image: "https://images.unsplash.com/photo-1582072710175-e9c9f15b50ed?auto=format&fit=crop&w=900&q=85",
-    imageAlt: "Vela y cartas de tarot en una lectura",
   },
 ];
 
@@ -128,7 +120,8 @@ function App() {
         <section className="services" id="servicios">
           <div className="section-heading reveal">
             <p className="script-label">Servicios destacados</p>
-            <h2>Una guía para cada momento</h2>
+            <h2>Claridad y soluciones para lo que estás viviendo</h2>
+            <p className="services-intro">Como vidente, en cada consulta esotérica leo tu situación con claridad: qué está pasando, por qué y qué hacer. Trabajo la videncia junto con rituales de amor y trabajos espirituales, para que la respuesta venga acompañada de una solución real.</p>
           </div>
 
           <div className="service-grid">
@@ -139,7 +132,7 @@ function App() {
                   <h3>{service.title}</h3>
                   <span className="service-tag">{service.tag}</span>
                   <p>{service.copy}</p>
-                  <div className="service-meta"><span><i className="fa-solid fa-star" aria-hidden="true"></i> 4.9</span><span>{service.meta}</span></div>
+                  <div className="service-meta"><span>{service.meta}</span></div>
                   <a href={whatsappUrl} target="_blank" rel="noopener noreferrer"><i className="fa-brands fa-whatsapp" aria-hidden="true"></i> Consultar</a>
                 </div>
               </article>

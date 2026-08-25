@@ -107,16 +107,15 @@ h1 { max-width: 580px; font-size: 3.7rem; line-height: 1.12; }
 .services { width: min(83%, 1180px); margin: 0 auto; padding: 1rem 0 6rem; text-align: center; }
 .section-heading { margin-bottom: 3.2rem; }
 .section-heading h2, .about h2, .contact h2 { font-size: 2.8rem; line-height: 1.15; }
-.service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.15rem; text-align: left; }
+.services-intro { max-width: 760px; margin: 1.1rem auto 0; color: var(--muted); font-size: .92rem; line-height: 1.7; }
+.service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.15rem; text-align: left; }
 .service-card { overflow: hidden; border: 1px solid rgba(181,132,222,.14); border-radius: 7px; background: var(--surface); box-shadow: 0 12px 34px rgba(0,0,0,.16); transition-delay: var(--delay); }
 .service-card > img { display: block; width: calc(100% - 1rem); height: 168px; margin: .5rem; border-radius: 5px; object-fit: cover; filter: saturate(.8) contrast(1.02); }
 .service-body { padding: .45rem .75rem .8rem; }
 .service-body h3 { font-family: var(--body); font-size: .92rem; font-weight: 600; }
 .service-tag { color: #c458dd; font-size: .66rem; }
 .service-body p { min-height: 57px; margin: .55rem 0 .5rem; color: #a99fb4; font-size: .68rem; line-height: 1.45; }
-.service-meta { display: flex; align-items: center; justify-content: space-between; margin: .55rem 0 .7rem; font-size: .58rem; }
-.service-meta span:first-child { color: #ffd84d; }
-.service-meta span:last-child { color: var(--green); }
+.service-meta { display: flex; align-items: center; margin: .55rem 0 .7rem; color: var(--green); font-size: .58rem; }
 .service-body > a { display: flex; width: 100%; height: 34px; align-items: center; justify-content: center; gap: .5rem; border: 1px solid #9d58d8; border-radius: 4px; color: #c67be2; font-size: .7rem; transition: background .2s ease; }
 .service-body > a:hover { background: rgba(157,88,216,.14); }
 .explore-button { margin-top: 3.5rem; }
@@ -148,7 +147,7 @@ footer > a:hover { color: var(--pink); }
   .hero, .specialties, .services, .about, .contact { width: min(90%, 900px); }
   h1 { font-size: 3.2rem; }
   .specialties { grid-template-columns: repeat(3, 1fr); }
-  .service-grid { grid-template-columns: repeat(2, 1fr); }
+  .service-grid { grid-template-columns: repeat(3, 1fr); }
 }
 
 @media (max-width: 767px) {
