@@ -4,6 +4,18 @@ const zodiacImage = "https://upload.wikimedia.org/wikipedia/commons/7/7b/Zodiac_
 const readerImage = "https://images.unsplash.com/photo-1681809238092-e18a6ebe3dda?auto=format&fit=crop&w=900&q=85";
 const whatsappUrl = "https://wa.me/?text=Hola%20Sof%C3%ADa%2C%20quisiera%20hacer%20una%20consulta";
 
+const zodiacSparkles = [
+  { x: "8%", y: "29%", size: "5px", delay: "-1.1s" },
+  { x: "18%", y: "7%", size: "8px", delay: "-2.8s" },
+  { x: "46%", y: "1%", size: "4px", delay: "-.4s" },
+  { x: "76%", y: "9%", size: "7px", delay: "-3.5s" },
+  { x: "94%", y: "35%", size: "5px", delay: "-2s" },
+  { x: "88%", y: "72%", size: "8px", delay: "-.8s" },
+  { x: "64%", y: "94%", size: "5px", delay: "-3.1s" },
+  { x: "31%", y: "91%", size: "7px", delay: "-1.7s" },
+  { x: "4%", y: "67%", size: "4px", delay: "-2.4s" },
+];
+
 const specialties = [
   { icon: "fa-eye", label: "Videncia" },
   { icon: "fa-moon", label: "Astrología" },
@@ -104,7 +116,23 @@ function App() {
 
           <div className="hero-visual reveal is-visible">
             <div className="zodiac-glow"></div>
-            <img src={zodiacImage} alt="Rueda de los signos del zodíaco" />
+            <div className="zodiac-wheel">
+              <img src={zodiacImage} alt="Rueda de los signos del zodíaco" />
+              <div className="sparkle-field" aria-hidden="true">
+                {zodiacSparkles.map((sparkle, index) => (
+                  <span
+                    className="sparkle"
+                    key={index}
+                    style={{
+                      "--sparkle-x": sparkle.x,
+                      "--sparkle-y": sparkle.y,
+                      "--sparkle-size": sparkle.size,
+                      "--sparkle-delay": sparkle.delay,
+                    }}
+                  ></span>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
